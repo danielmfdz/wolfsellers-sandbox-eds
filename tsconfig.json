@@ -8,7 +8,7 @@
     "types": [],
     "allowJs": false,
     "removeComments": true,
-    "sourceMap": false,
+    "sourceMap": false
   },
   "include": [
     "blocks/**/*.ts"
