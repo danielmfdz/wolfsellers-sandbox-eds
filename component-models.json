@@ -221,7 +221,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "cardsplans",
+        "name": "url",
         "label": "Ingresa url",
         "value": ""
       }
