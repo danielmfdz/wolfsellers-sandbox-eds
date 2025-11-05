@@ -14,14 +14,14 @@
     "build:json:filters": "merge-json-cli -i \"models/_component-filters.json\" -o \"component-filters.json\"",
     "prepare": "husky",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "build:blocks": "esbuild \"blocks/**/*.ts\" --outdir=blocks --outbase=blocks --format=esm --bundle=false  --legal-comments=none",
-    "buildTS": "npm-run-all typecheck build:blocks && npm run postbuild:format",
+    "build:blocks": "esbuild \"blocks/**/*.ts\" --outdir=blocks --outbase=blocks --format=esm --bundle --external:*.css --legal-comments=none --target=es2020",
+    "buildTS": "npm-run-all typecheck build:blocks && node scripts/fix-exports.mjs",
     "watch:blocks": "npm run build:blocks -- --watch",
     "watch:scripts": "npm run build:scripts -- --watch",
     "watch:tools": "npm run build:tools -- --watch",
     "watch:models": "npm run build:models -- --watch",
     "watch": "npm-run-all --parallel watch:*",
-    "postbuild:format": "prettier --write \"blocks/**/*.js\" "
+    "postbuild:format": "prettier --write \"blocks/**/*.js\" --single-quote"
   },
   "repository": {
     "type": "git",
