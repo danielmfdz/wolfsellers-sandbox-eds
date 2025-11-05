@@ -1,8 +1,7 @@
 export default async function decorate(block) {
   const [quoteWrapper] = block.children;
-
   const blockquote = document.createElement('a');
-  blockquote.text = "hola";
+  blockquote.text = 'hola';
   blockquote.href = quoteWrapper.textContent;
   quoteWrapper.replaceChildren(blockquote);
 }
