@@ -156,6 +156,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Cards Plans",
+          "id": "cardsplans",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/text/v1/block",
+                "template": {
+                  "name": "CardsPlans",
+                  "model": "cardsplans"
+                }
+              }
+            }
+          }
         }
       ]
     }
