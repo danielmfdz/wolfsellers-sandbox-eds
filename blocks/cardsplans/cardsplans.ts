@@ -1,3 +1,6 @@
+import { QUERIES } from '../../scripts/config/constants.js';
+import { buildGraphQLEndpoint } from '../../scripts/helpers/endpoints.js';
+
 type PackageData = {
   key: string;
   expiration: string;
@@ -7,7 +10,7 @@ type PackageData = {
 }
 
 export default async function decorate(block: HTMLElement) {
-  const res = await fetch('https://publish-p153442-e1604645.adobeaemcloud.com/graphql/execute.json/Sandbox-Models/get-all-cards-plans');
+  const res = await fetch(buildGraphQLEndpoint(QUERIES.getAllCardsPlans));
   const { data } = await res.json();
   const { cardsPlansModelList: { items: [{ cardData: [{ packages }] }] } } = data;
   let elementString: string = '<div class="card-container">';

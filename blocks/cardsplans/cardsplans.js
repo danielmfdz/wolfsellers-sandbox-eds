@@ -1,6 +1,9 @@
 // blocks/cardsplans/cardsplans.ts
+import { QUERIES } from '../../scripts/config/constants.js';
+import { buildGraphQLEndpoint } from '../../scripts/helpers/endpoints.js';
+
 export default async function decorate(block) {
-  const res = await fetch('https://publish-p153442-e1604645.adobeaemcloud.com/graphql/execute.json/Sandbox-Models/get-all-cards-plans');
+  const res = await fetch(buildGraphQLEndpoint(QUERIES.getAllCardsPlans));
   const { data } = await res.json();
   const {
     cardsPlansModelList: {
