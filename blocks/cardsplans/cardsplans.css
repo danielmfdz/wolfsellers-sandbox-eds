@@ -1,3 +1,83 @@
-button {
-    background-color: brown;
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.card-plan {
+    min-width: 500px;
+
+    border-radius: 1rem;
+    border: 1px solid #d0d0d0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.card-plan-title {
+    width: 100%;
+    background: #cbdffc;
+    padding: 0.6rem 0.8rem;
+
+    p {
+        color: #00529b;
+        font-weight: bold;
+    }
+
+}
+
+.card-plan-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0.8rem;
+}
+
+.card-plan-body__cantidad {
+    font-size: 1.5rem;
+    color: #00529b;
+    font-weight: bold;
+}
+
+.card-plan-body>div {
+    &> :not(:last-child) {
+        margin-block-end: 0.3rem;
+    }
+}
+
+.card-plan-body__price {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+
+    &::before {
+        content: '$';
+        display: inline-block;
+    }
+}
+
+.card-plan-body-btn__iwant {
+    background: #7b1fa2;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #7b1fa2;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.just-i-end {
+    justify-items: end;
+}
+
+.card-plan-footer {
+    width: 100%;
+    padding: 0rem 0.8rem;
+
+    &>div {
+        border-top: 1px solid #d0d0d0;
+        padding: 0.8rem 0;
+    }
 }
