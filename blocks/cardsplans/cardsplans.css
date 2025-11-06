@@ -58,7 +58,8 @@
     }
 }
 
-.card-plan-body-btn-iwant {
+.card-plan-body-btn-iwant,
+.card-plan-body-btn-iwant:hover {
     background: #7b1fa2;
     color: #fff;
     padding: 0.6rem 1.2rem;

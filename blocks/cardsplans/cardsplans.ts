@@ -25,8 +25,8 @@ export default async function decorate(block: HTMLElement) {
             <p>Datos</p>
           </div>
           <div class="just-i-end">
-            <p class="card-plan-body__price">${plan.price}</p>
-            <button class="card-plan-body-btn__iwant">Lo quiero</button>
+            <p class="card-plan-body-price">${plan.price}</p>
+            <button class="card-plan-body-btn-iwant">Lo quiero</button>
           </div>
         </div>
         <div class="card-plan-footer">
