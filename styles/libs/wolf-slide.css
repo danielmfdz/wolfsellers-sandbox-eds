@@ -1,0 +1,29 @@
+.wolf-slide {
+  margin: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* todas las imágenes ocupan el ancho completo */
+.wolf-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* para el efecto fade */
+.wolf-slide .slide {
+  opacity: 0;
+  transition: opacity 0.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* imagen visible */
+.wolf-slide .slide.active {
+  opacity: 1;
+  position: relative;
+}
