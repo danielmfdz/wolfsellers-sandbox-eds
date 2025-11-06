@@ -69,17 +69,26 @@ async function fixExports() {
     
     console.log(`\n🎉 Proceso completado: ${processedCount} archivo(s) corregido(s)`);
     
-    // Ejecutar prettier después de corregir los exports
+    // Ejecutar prettier y eslint después de corregir los exports
     if (processedCount > 0) {
       console.log('\n🎨 Formateando archivos con prettier...');
       try {
-        execSync('npx prettier --write "blocks/**/*.js"', { 
+        execSync('npx prettier --write "blocks/**/*.js" "scripts/config/**/*.js" "scripts/helpers/**/*.js"', { 
           cwd: rootDir,
           stdio: 'inherit'
         });
-        console.log('✅ Formateo completado');
+        console.log('✅ Formateo con Prettier completado');
+        
+        console.log('\n🔧 Aplicando reglas de ESLint...');
+        execSync('npx eslint "blocks/**/*.js" "scripts/config/**/*.js" "scripts/helpers/**/*.js" --fix', {
+          cwd: rootDir,
+          stdio: 'inherit'
+        });
+        console.log('✅ ESLint aplicado correctamente');
+        
+        console.log('\n✨ Código formateado y linted correctamente');
       } catch (error) {
-        console.error('⚠️  Error al formatear con prettier:', error.message);
+        console.error('⚠️  Error al formatear/lint:', error.message);
       }
     }
   } catch (error) {
