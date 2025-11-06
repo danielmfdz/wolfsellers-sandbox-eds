@@ -18,7 +18,7 @@ export default async function decorate(block: HTMLElement) {
         </div>
         <div class="card-plan-body">
           <div>
-            <p class="card-plan-body__cantidad">${plan.megabytesIncluded < 0 ? 'Ilimitados' : plan.megabytesIncluded}</p>
+            <p class="card-plan-body-cantidad">${plan.megabytesIncluded < 0 ? 'Ilimitados' : plan.megabytesIncluded}</p>
             <p>Datos</p>
           </div>
           <div class="just-i-end">
