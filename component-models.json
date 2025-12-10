@@ -231,23 +231,10 @@
     "id": "promo-banner",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "headline",
-        "label": "Headline"
-      },
-      {
         "component": "text-area",
         "valueType": "string",        
         "name": "description",
         "label": "Description"
-      },
-      {
-        "component": "text-input",
-        "name": "bgColor",
-        "label": "Background color (hex)",
-        "valueType": "string",
-        "value": "#ffe6f2"
       },
       {
         "component": "boolean",
@@ -257,27 +244,10 @@
         "value": false
       },
       {
-        "component": "number",
-        "name": "discount",
-        "label": "Discount (%)",
-        "valueType": "number"
-      },
-      {
         "component": "date-time",
         "name": "startDate",
         "label": "Promo start date",
         "valueType": "date"
-      },
-      {
-        "component": "multiselect",
-        "name": "badges",
-        "label": "Badges",
-        "valueType": "string[]",
-        "options": [
-          { "name": "New", "value": "new" },
-          { "name": "Online only", "value": "online-only" },
-          { "name": "Limited", "value": "limited" }
-        ]
       },
       {
         "component": "select",
