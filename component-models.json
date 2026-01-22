@@ -231,10 +231,18 @@
     "id": "promo-banner",
     "fields": [
       {
-        "component": "text-area",
-        "valueType": "string",        
+        "component": "richtext",
         "name": "description",
-        "label": "Description"
+        "label": "Description",
+        "valueType": "string",
+        "rte": {
+          "toolbar": {
+            "format": ["bold", "italic", "underline"],
+            "list": ["unordered", "ordered"],
+            "link": ["link", "unlink"],
+            "tools": ["fullscreen"]
+          }
+        }
       },
       {
         "component": "boolean",
