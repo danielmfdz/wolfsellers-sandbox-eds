@@ -256,18 +256,6 @@
         "name": "startDate",
         "label": "Promo start date",
         "valueType": "date"
-      },
-      {
-        "component": "select",
-        "name": "layout",
-        "label": "Layout",
-        "valueType": "string",
-        "options": [
-          { "name": "Left image", "value": "left" },
-          { "name": "Right image", "value": "right" },
-          { "name": "Centered", "value": "center" }
-        ],
-        "value": "left"
       }
     ]
   }
