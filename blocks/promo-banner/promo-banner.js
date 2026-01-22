@@ -1,8 +1,10 @@
 export default async function decorate(block) {
-  const elements = block.children;
-  let html = '';
-  elements.array.forEach((element) => {
-    html += element;
-  });
-  block.insertAdjacentHTML('beforeend', html);
+  const rows = block.querySelectorAll(':scope > div');
+
+  const descriptionHTML = rows[0]?.innerHTML ?? '';
+  const showBadge = rows[1]?.textContent.trim() === 'true';
+  const startDate = new Date(rows[2]?.textContent.trim());
+  const layout = rows[3]?.textContent.trim() || 'center';
+
+  console.log([descriptionHTML, showBadge, startDate, layout]);
 }
