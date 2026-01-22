@@ -40,5 +40,17 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "restricted-rte",
+    "components": ["richtext"],
+    "rte": {
+      "toolbar": {
+        "format": ["bold", "italic"],
+        "blocks": ["paragraph"],
+        "list": ["bullet_list", "ordered_list"],
+        "insert": ["link", "unlink"]
+      }
+    }
   }
 ]
