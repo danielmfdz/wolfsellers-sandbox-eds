@@ -231,19 +231,18 @@
     "id": "promo-banner",
     "fields": [
       {
-        "component": "richtext", 
+        "component": "richtext",
         "name": "description",
         "label": "Description",
         "valueType": "string",
         "rte": {
-          "core": {
-            "toggles": {
-              "header": false
-            }
-          },
-          "format": ["bold", "italic", "underline"],
-          "list": ["unordered", "ordered"],
-          "link": ["link", "unlink"]
+          "toolbar": {
+            "format": ["bold", "italic", "underline"],
+            "blocks": ["paragraph"],
+            "list": ["bullet_list", "ordered_list"],
+            "insert": ["link", "unlink"],
+            "sections": ["format", "blocks", "list", "insert"]
+          }
         }
       },
       {
@@ -252,6 +251,12 @@
         "label": "Show promo badge",
         "valueType": "boolean",
         "value": false
+      },
+      {
+        "component": "date-time",
+        "name": "startDate",
+        "label": "Promo start date",
+        "valueType": "date"
       }
     ]
   }
