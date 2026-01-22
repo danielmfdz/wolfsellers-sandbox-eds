@@ -237,13 +237,19 @@
         "valueType": "string",
         "rte": {
           "toolbar": {
-            "format": ["bold", "italic", "underline"],
-            "blocks": ["paragraph"],
+            "format": ["bold", "italic", "underline", "strike"],
+            "alignment": ["left", "center", "right", "justify"],
+            "direction": ["rtl", "ltr"],
+            "indentation": ["indent", "outdent"],
+            "blocks": ["paragraph", "code_block"],
             "list": ["bullet_list", "ordered_list"],
-            "insert": ["link", "unlink"],
-            "sections": ["format", "blocks", "list", "insert"]
+            "insert": ["link", "unlink", "image"],
+            "sr_script": ["superscript", "subscript"],
+            "editor": ["removeformat"],
+            "sections": ["format", "alignment", "list"]
           }
         }
+
       },
       {
         "component": "boolean",
@@ -251,12 +257,6 @@
         "label": "Show promo badge",
         "valueType": "boolean",
         "value": false
-      },
-      {
-        "component": "date-time",
-        "name": "startDate",
-        "label": "Promo start date",
-        "valueType": "date"
       }
     ]
   }
